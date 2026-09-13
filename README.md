@@ -4,7 +4,8 @@ Edytor GUI działający jako aplikacja desktopowa (webview_go + serwer HTTP w Go
 który generuje statyczny frontend (`index.html`, `style.css`, `app.js`) oraz
 szablon backendu Go (`backend.go`), gotowe do dalszego rozwijania.
 
-Wersja: patrz `var version` w `src/main.go`.
+<img width="1720" height="971" alt="8f85cee7ef9f9552c3ca965a3a0be412" src="https://github.com/user-attachments/assets/01ea373b-b931-4ff1-a754-79eb818a7c65" />
+
 
 ## Spis treści
 
