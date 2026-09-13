@@ -9,8 +9,6 @@ szablon backendu Go (`backend.go`), gotowe do dalszego rozwijania.
 
 ## Spis treści
 
-- [Struktura projektu edytora](#struktura-projektu-edytora)
-- [Uruchomienie](#uruchomienie)
 - [Praca z projektami](#praca-z-projektami)
 - [Komponenty](#komponenty)
 - [Rozmieszczanie komponentów](#rozmieszczanie-komponentów)
@@ -21,39 +19,6 @@ szablon backendu Go (`backend.go`), gotowe do dalszego rozwijania.
 - [Integracja z backendem Go](#integracja-z-backendem-go)
 - [Rozwiązywanie problemów](#rozwiązywanie-problemów)
 
-## Struktura projektu edytora
-
-```
-go-gui-builder/
-├── go.mod                     # moduł: SunWebUI_edytor
-├── media/                     # ikony, splash (konwencja SunGo)
-├── src/
-│   ├── main.go                # start webview + serwer HTTP + dialogi plików/folderów
-│   ├── editor/
-│   │   ├── server.go           # /api/save /api/load /api/projects /api/export
-│   │   ├── model.go            # Component, StyleProps, Project, Meta
-│   │   └── generator.go        # generatory HTML/CSS/JS/backend.go (eksport)
-│   ├── Frontend/               # UI SAMEGO edytora (osadzone w binarce przez go:embed)
-│   │   ├── index.html
-│   │   ├── editor.js
-│   │   ├── editor.css
-│   │   ├── nls_pl.json          # tłumaczenia PL
-│   │   └── nls_en.json          # tłumaczenia EN
-│   └── templates/
-└── projects/
-    └── <Nazwa Projektu>.json   # jeden plik na projekt — nazwa pliku = nazwa projektu
-```
-
-## Uruchomienie
-
-```bash
-go mod tidy
-go run ./src
-```
-
-Wymagania: kompilator C (cgo) dla `webview_go`/`sqweek/dialog` — na Windows to
-zwykle MinGW-w64 (gcc) w PATH; na Windows potrzebny jest też zainstalowany
-Microsoft Edge WebView2 Runtime (zwykle jest domyślnie z Edge).
 
 ## Praca z projektami
 
